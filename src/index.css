@@ -26,3 +26,7 @@ form{
 form button,h5{
   margin: 20px 0;
 }
+
+.card{
+  padding: 10px;
+}
