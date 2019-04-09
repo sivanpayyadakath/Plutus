@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Notifications from './Notifications.js'
 import ProjectList from '../projects/ProjectList.js'
+import { connect } from 'react-redux'
+
 
 class Dashboard extends Component{
     render(){
@@ -15,4 +17,10 @@ class Dashboard extends Component{
     }
 }
 
-export default Dashboard;
+const mapStatetoProps = (state) => { 
+    return{
+        projects: state.project.projects
+    }
+}
+
+export default connect(mapStatetoProps)(Dashboard);
